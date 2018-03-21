@@ -1,5 +1,11 @@
 package com.zubbo.service.Impl;
 
+
+
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.zubbo.api.TestService;
 
 /**
@@ -10,11 +16,10 @@ import com.zubbo.api.TestService;
  */
 public class TestServiceImpl implements TestService{
 
-	/* (non-Javadoc)
-	 * @see com.zubbo.service.TestService#sayHello()
-	 */
+    public static final Logger log = LoggerFactory.getLogger(TestServiceImpl.class);
+	
 	public void sayHello() {
-		System.out.println("say Hello !");
+		log.info("say Hello!");
 	}
     
 }

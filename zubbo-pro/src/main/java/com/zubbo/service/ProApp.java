@@ -14,12 +14,17 @@ public class ProApp
 {
     public static void main( String[] args ) throws InterruptedException, IOException
     {
-       ClassPathXmlApplicationContext cxa = new ClassPathXmlApplicationContext("classpath*:applicationContext.xml");
-       cxa.start();
-       synchronized (ProApp.class) {
-    	   while (true) {
-    		   ProApp.class.wait();
-		}
-       }
+    	com.alibaba.dubbo.container.Main.main(args);
     }
+    
+    public static void startBySpring() throws InterruptedException {
+    	ClassPathXmlApplicationContext cxa = new ClassPathXmlApplicationContext("classpath*:applicationContext.xml");
+        cxa.start();
+        synchronized (ProApp.class) {
+     	   while (true) {
+     		   ProApp.class.wait();
+ 		 }
+        }
+    }
+    
 }
