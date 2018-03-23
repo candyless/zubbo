@@ -7,5 +7,5 @@ package com.zubbo.api;
  * @date 2018年3月20日 上午9:20:25
  */
 public interface TestService {
-    public void sayHello();
+    void sayHello();
 }

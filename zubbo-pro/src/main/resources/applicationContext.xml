@@ -16,9 +16,9 @@
 	  	http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
 	    http://code.alibabatech.com/schema/dubbo 
 		http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
-
+ 	<context:component-scan base-package="com.zubbo.service"/>
 	<bean id="testService" class="com.zubbo.service.Impl.TestServiceImpl" />
-	
+	<bean id="userService" class="com.zubbo.service.Impl.UserServiceImpl" />
 	
 	<dubbo:application name="t" />
 	<dubbo:registry address="zookeeper://127.0.0.1:2181" />

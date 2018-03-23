@@ -5,8 +5,10 @@ package com.zubbo.service.Impl;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.zubbo.api.TestService;
+import com.zubbo.service.UserService;
 
 /**
  * @ClassName: TestServiceImpl
@@ -16,10 +18,13 @@ import com.zubbo.api.TestService;
  */
 public class TestServiceImpl implements TestService{
 
-    public static final Logger log = LoggerFactory.getLogger(TestServiceImpl.class);
-	
+    private static final Logger log = LoggerFactory.getLogger(TestServiceImpl.class);
+    
+    @Autowired
+	private UserService userService;
 	public void sayHello() {
 		log.info("say Hello!");
+		userService.getUser();
 	}
     
 }
