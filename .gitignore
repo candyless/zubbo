@@ -5,4 +5,6 @@
 .settings 
 /zubbo-api/target/
 /zubbo-pro/target/
-/zubbo-con/target/   
+/zubbo-con/target/
+/zubbo-pro/log/
+/zubbo-con/log/     
